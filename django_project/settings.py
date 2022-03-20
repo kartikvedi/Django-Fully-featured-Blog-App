@@ -28,7 +28,8 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['djangoblogappbykv.herokuapp.com']
 
